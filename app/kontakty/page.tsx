@@ -154,6 +154,35 @@ export default function Kontakty() {
         </div>
       </section>
 
+      {/* Карта */}
+      <section className="py-16 px-6 bg-[#0a0f20] relative">
+        <div className="absolute inset-0 stars-bg opacity-20" />
+        <div className="max-w-4xl mx-auto relative z-10">
+          <p className="text-[#e94560] text-sm tracking-widest uppercase text-center mb-3">
+            Як нас знайти
+          </p>
+          <h2 className="text-3xl font-bold text-white text-center mb-4">
+            Ми на карті
+          </h2>
+          <div className="section-divider w-24 mx-auto mb-10" />
+          <div className="rounded-xl overflow-hidden border border-[#1a2d5e]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.5!2d29.2368!3d48.6847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0JvQsNC00LjQttC40L0sINCy0YPQuy4g0JHRg9C00ZbQstC10LvRjNC90LjQutGW0LIsIDQw!5e0!3m2!1suk!2sua!4v1"
+              width="100%"
+              height="400"
+              style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Вічна пам'ять на карті"
+            />
+          </div>
+          <p className="text-gray-500 text-center mt-4 text-sm">
+            м. Ладижин, вул. Будівельників, 40, цокольний поверх
+          </p>
+        </div>
+      </section>
+
       {/* Футер */}
       <footer className="bg-[#060a15] py-10 px-6 mt-auto border-t border-white/5">
         <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
