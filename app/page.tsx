@@ -2,6 +2,7 @@ import Link from "next/link";
 import Candle from "./components/Candle";
 import Gallery from "./components/Gallery";
 import Particles from "./components/Particles";
+import ServiceIcon from "./components/ServiceIcon";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -29,43 +30,43 @@ const services = [
     title: "Організація похорон",
     description:
       "Повний комплекс послуг з організації похоронної церемонії. Ми беремо на себе всі турботи.",
-    icon: "🕯️",
+    icon: "flame",
   },
   {
     title: "Ритуальні товари",
     description:
       "Труни, вінки, квіти, хрести, пам'ятники та інші ритуальні атрибути.",
-    icon: "🌹",
+    icon: "flower",
   },
   {
     title: "Перевезення по Україні та Європі",
     description:
       "Перевезення тіл з будь-якої точки України. Доставка з-за кордону (Європа — за домовленістю).",
-    icon: "🚐",
+    icon: "truck",
   },
   {
     title: "Похорон онлайн",
     description:
       "Повна організація церемонії з прямою трансляцією для рідних, які не можуть бути присутніми.",
-    icon: "📹",
+    icon: "video",
   },
   {
     title: "Оформлення документів",
     description:
       "Допомога з оформленням свідоцтва про смерть та інших необхідних документів.",
-    icon: "📋",
+    icon: "filetext",
   },
   {
     title: "Пам'ятники на замовлення",
     description:
       "Виготовлення та встановлення пам'ятників за індивідуальним дизайном. Огорожі, плитка, благоустрій.",
-    icon: "🪦",
+    icon: "landmark",
   },
   {
     title: "Догляд за могилами",
     description:
       "Регулярний догляд за місцем поховання: прибирання, озеленення, підтримка в належному стані.",
-    icon: "🌿",
+    icon: "tree",
   },
 ];
 
@@ -169,7 +170,7 @@ export default function Home() {
               href="tel:+380972544818"
               className="inline-block border border-white/30 text-white px-10 py-4 rounded-lg text-lg font-medium hover:border-white/70 hover:bg-white/5 transition-all duration-300"
             >
-              📞 Зателефонувати
+              Зателефонувати
             </a>
           </div>
 
@@ -213,8 +214,8 @@ export default function Home() {
                   }}
                 />
 
-                <div className="text-4xl mb-5 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                <div className="w-12 h-12 rounded-lg bg-[#e94560]/10 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-[#e94560]/20 transition-all duration-300">
+                  <ServiceIcon name={service.icon} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {service.title}
@@ -277,8 +278,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="group">
-              <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-gradient-to-b from-[#1a2d5e] to-[#16213e] border border-[#1a2d5e] flex items-center justify-center text-3xl group-hover:border-[#e94560]/50 group-hover:shadow-[0_0_20px_rgba(233,69,96,0.15)] transition-all duration-300">
-                🕐
+              <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-gradient-to-b from-[#1a2d5e] to-[#16213e] border border-[#1a2d5e] flex items-center justify-center group-hover:border-[#e94560]/50 group-hover:shadow-[0_0_20px_rgba(233,69,96,0.15)] transition-all duration-300">
+                <ServiceIcon name="clock" size={32} />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 Цілодобово
@@ -288,8 +289,8 @@ export default function Home() {
               </p>
             </div>
             <div className="group">
-              <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-gradient-to-b from-[#1a2d5e] to-[#16213e] border border-[#1a2d5e] flex items-center justify-center text-3xl group-hover:border-[#e94560]/50 group-hover:shadow-[0_0_20px_rgba(233,69,96,0.15)] transition-all duration-300">
-                💰
+              <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-gradient-to-b from-[#1a2d5e] to-[#16213e] border border-[#1a2d5e] flex items-center justify-center group-hover:border-[#e94560]/50 group-hover:shadow-[0_0_20px_rgba(233,69,96,0.15)] transition-all duration-300">
+                <ServiceIcon name="wallet" size={32} />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 Доступні ціни
@@ -299,8 +300,8 @@ export default function Home() {
               </p>
             </div>
             <div className="group">
-              <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-gradient-to-b from-[#1a2d5e] to-[#16213e] border border-[#1a2d5e] flex items-center justify-center text-3xl group-hover:border-[#e94560]/50 group-hover:shadow-[0_0_20px_rgba(233,69,96,0.15)] transition-all duration-300">
-                🤝
+              <div className="w-20 h-20 mx-auto mb-5 rounded-full bg-gradient-to-b from-[#1a2d5e] to-[#16213e] border border-[#1a2d5e] flex items-center justify-center group-hover:border-[#e94560]/50 group-hover:shadow-[0_0_20px_rgba(233,69,96,0.15)] transition-all duration-300">
+                <ServiceIcon name="handshake" size={32} />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 З повагою
@@ -330,7 +331,7 @@ export default function Home() {
               href="tel:+380972544818"
               className="inline-block bg-[#e94560] text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-[#c73e54] transition-all duration-300 hover:shadow-[0_0_30px_rgba(233,69,96,0.4)]"
             >
-              📞 +38 (097) 254-48-18
+              +38 (097) 254-48-18
             </a>
             <Link
               href="/kontakty"
