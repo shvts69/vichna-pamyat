@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "Вічна пам'ять",
     "похоронне бюро Вінницька область",
   ],
+  verification: {
+    google: "IgK8bMkGg-gCpEWsW_cYI_Bd6JofK-RdSZm6V1We1Ao",
+  },
   openGraph: {
     title: "Вічна пам'ять — Ритуальні послуги в Ладижині",
     description:
