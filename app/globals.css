@@ -57,9 +57,8 @@ body {
 }
 
 @keyframes riseSlow {
-  0% { transform: translateY(100vh) scale(0); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 0.6; }
+  0% { transform: translateY(100vh) scale(1); opacity: 0.8; }
+  90% { opacity: 0.5; }
   100% { transform: translateY(-10vh) scale(1); opacity: 0; }
 }
 
