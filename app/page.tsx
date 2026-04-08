@@ -2,6 +2,7 @@ import Link from "next/link";
 import Candle from "./components/Candle";
 import Gallery from "./components/Gallery";
 import Particles from "./components/Particles";
+import Dove from "./components/Dove";
 import ServiceIcon from "./components/ServiceIcon";
 
 const jsonLd = {
@@ -114,6 +115,9 @@ export default function Home() {
 
         {/* Плаваючі частинки світла */}
         <Particles />
+
+        {/* Голуб — Святий Дух */}
+        <Dove />
 
         {/* Промені світла зверху */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[500px] pointer-events-none"

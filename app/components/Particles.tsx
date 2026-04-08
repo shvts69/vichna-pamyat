@@ -1,12 +1,12 @@
 "use client";
 
 export default function Particles() {
-  const particles = Array.from({ length: 15 }, (_, i) => ({
+  const particles = Array.from({ length: 35 }, (_, i) => ({
     left: `${Math.random() * 100}%`,
-    delay: `${Math.random() * 10}s`,
-    duration: `${8 + Math.random() * 12}s`,
-    size: `${2 + Math.random() * 3}px`,
-    opacity: 0.3 + Math.random() * 0.5,
+    delay: `${Math.random() * 8}s`,
+    duration: `${5 + Math.random() * 8}s`,
+    size: `${2 + Math.random() * 4}px`,
+    opacity: 0.4 + Math.random() * 0.6,
   }));
 
   return (
