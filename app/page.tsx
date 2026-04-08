@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Candle from "./components/Candle";
 import Gallery from "./components/Gallery";
 import Particles from "./components/Particles";
@@ -114,6 +115,11 @@ export default function Home() {
 
         {/* Плаваючі частинки світла */}
         <Particles />
+
+        {/* Голуб */}
+        <div className="absolute top-20 right-[10%] pointer-events-none animate-float opacity-30 hidden md:block" style={{ animationDuration: "5s" }}>
+          <Image src="/dove.png" alt="" width={120} height={120} className="drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+        </div>
 
 
         {/* Промені світла зверху */}
