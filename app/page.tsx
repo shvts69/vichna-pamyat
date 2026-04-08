@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Candle from "./components/Candle";
+import Gallery from "./components/Gallery";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -180,6 +181,19 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Наш салон */}
+      <section className="py-16 px-6 bg-[#16213e]">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-4">
+            Наш салон
+          </h2>
+          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+            Широкий вибір ритуальних товарів: труни, вінки, квіти та аксесуари на будь-який бюджет
+          </p>
+          <Gallery />
         </div>
       </section>
 
