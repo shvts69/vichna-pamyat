@@ -167,7 +167,7 @@ export default function Kontakty() {
           <div className="section-divider w-24 mx-auto mb-10" />
           <div className="rounded-xl overflow-hidden border border-[#1a2d5e]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.5!2d29.2368!3d48.6847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0JvQsNC00LjQttC40L0sINCy0YPQuy4g0JHRg9C00ZbQstC10LvRjNC90LjQutGW0LIsIDQw!5e0!3m2!1suk!2sua!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500!2d29.2292447!3d48.6811812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cd71001d6ea1f9%3A0x41216f79e397b769!2z0JLRltGH0L3QsCDQn9Cw0Lxp0Y_RgtGM!5e0!3m2!1suk!2sua!4v1"
               width="100%"
               height="400"
               style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
