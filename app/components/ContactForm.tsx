@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "../lib/supabase";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -13,13 +12,13 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("sending");
 
-    const { error } = await supabase.from("requests").insert({
-      name,
-      phone,
-      message,
+    const res = await fetch("/api/request", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, phone, message }),
     });
 
-    if (error) {
+    if (!res.ok) {
       setStatus("error");
     } else {
       setStatus("success");
