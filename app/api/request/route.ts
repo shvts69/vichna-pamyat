@@ -6,7 +6,7 @@ const supabase = createClient(
 );
 
 const TELEGRAM_BOT_TOKEN = "8634356552:AAGKLUuclLu8FieLGqxiHeVB-o7KjE7H6Js";
-const TELEGRAM_CHAT_ID = "7554753405";
+const TELEGRAM_CHAT_IDS = ["7554753405", "5200742686"];
 
 async function sendTelegram(name: string, phone: string, message: string) {
   const text = [
@@ -19,16 +19,14 @@ async function sendTelegram(name: string, phone: string, message: string) {
     .filter(Boolean)
     .join("\n");
 
-  await fetch(
-    `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: TELEGRAM_CHAT_ID,
-        text,
-      }),
-    }
+  await Promise.all(
+    TELEGRAM_CHAT_IDS.map((chat_id) =>
+      fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id, text }),
+      })
+    )
   );
 }
 
